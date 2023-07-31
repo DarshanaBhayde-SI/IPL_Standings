@@ -1,0 +1,196 @@
+<html>
+
+<head>
+    <title>
+        IPL 2020 Points Table
+    </title>
+    <style>
+        .styled-table {
+            border-collapse: collapse;
+            margin: 0 auto;
+            font-size: 0.9em;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            min-width: 400px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0, 0.15);
+
+        }
+
+        .styled-table thead tr {
+            background-color: #009879;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        .styled-table th,
+        .styled-table td {
+            padding: 15px 17px;
+        }
+
+        .styled-table tbody tr {
+            border-bottom: 1px solid #dddddd;
+        }
+
+        .styled-table tbody tr:nth-of-type(even) {
+            background-color: #f3f3f3;
+        }
+
+        .styled-table tbody tr:last-of-type {
+            border-bottom: 2px solid #009879
+        }
+
+        .styled-table tbody tr.active-row {
+            font-weight: bold;
+            color: white;
+            background-color: darkslateblue;
+        }
+
+        .content {
+            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .header {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+        }
+
+        .logo {
+            width: 80px;
+            height: 90px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header class="header">
+        <img src="IPL2020.jpg " class="logo">
+
+        <h2>Indian Premier League 2020 Points Table</h2>
+
+    </header>
+
+    </div>
+    <table class="styled-table" style="text-align: center">
+        <thead style="text-align: center">
+            <tr style="text-align: center">
+                <th>RANK</th>
+                <th>TEAM</th>
+                <th>PLAYER</th>
+                <th>WON</th>
+                <th>LOST</th>
+                <th>NET RR</th>
+                <th>POINTS</th>
+            </tr>
+            </thread>
+        <tbody id="myTable">
+
+
+        </tbody>
+    </table>
+
+
+    <script>
+        var myArray = [
+            {
+                "position": 1,
+                "logo": "RCB.webp",
+                "playedMatches": 10,
+                "wins": 7,
+                "losses": 3,
+                "netRunRate": "+1.448",
+                "points": 14
+            },
+            {
+                "position": 2,
+                "logo": "MI.webp",
+                "playedMatches": 10,
+                "wins": 7,
+                "losses": 3,
+                "netRunRate": "+1.448",
+                "points": 14
+            },
+            {
+                "position": 3,
+                "logo": "CSK.jpg",
+                "playedMatches": 10,
+                "wins": 7,
+                "losses": 3,
+                "netRunRate": "+1.448",
+                "points": 14
+            },
+            {
+                "position": 4,
+                "logo": "KKR.jpg",
+                "playedMatches": 10,
+                "wins": 7,
+                "losses": 3,
+                "netRunRate": "+1.448",
+                "points": 14
+            },
+            {
+                "position": 5,
+                "logo": "RR.png",
+                "playedMatches": 10,
+                "wins": 7,
+                "losses": 3,
+                "netRunRate": "+1.448",
+                "points": 14
+            },
+            {
+                "position": 6,
+                "logo": "PBKS.png",
+                "playedMatches": 10,
+                "wins": 7,
+                "losses": 3,
+                "netRunRate": "+1.448",
+                "points": 14
+            },
+            {
+                "position": 7,
+                "logo": "DC.webp",
+                "playedMatches": 10,
+                "wins": 7,
+                "losses": 3,
+                "netRunRate": "+1.448",
+                "points": 14
+            },
+            {
+                "position": 8,
+                "logo": "SRH.webp",
+                "playedMatches": 10,
+                "wins": 7,
+                "losses": 3,
+                "netRunRate": "+1.448",
+                "points": 14
+            },
+        ]
+
+        buildTable(myArray)
+
+        function buildTable(data) {
+            var table = document.getElementById('myTable')
+
+            for (var i = 0; i < data.length; i++) {
+                var row = `<tr>
+                            <td>${data[i].position}</td>
+                            <td>${data[i].logo}</td>
+                            <td>${data[i].playedMatches}</td>
+                            <td>${data[i].wins}</td>
+                            <td>${data[i].losses}</td>
+                            <td>${data[i].netRunRate}</td>
+                            <td>${data[i].points}</td>
+                      </tr>`
+
+                table.innerHTML += row
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>
